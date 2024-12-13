@@ -1,0 +1,28 @@
+nav {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0px 30px 80px rgba(0, 0, 0, 0.22);
+  z-index: 2;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.navList li {
+  list-style: none;
+  padding: 10px 20px;
+}
+.navList li:last-child {
+  margin-left: 500px;
+}
+.navList li a {
+  text-decoration: none;
+  color: #fff;
+}

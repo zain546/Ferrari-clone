@@ -1,0 +1,115 @@
+
+video {
+  position: relative;
+}
+.sideBars {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.left-menu {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.hamB {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 70%);
+  color: white;
+  text-align: center;
+}
+h1 {
+  padding-top: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.discover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #616870;
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+}
+.icon-container::before {
+  content: "";
+  position: absolute;
+  top: -2px; /* Adjust according to border width */
+  left: -2px; /* Adjust according to border width */
+  width: calc(100% + 4px); /* Adjust according to border width */
+  height: calc(100% + 4px); /* Adjust according to border width */
+  border-radius: 50%;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: border 1s linear;
+}
+
+.icon-container:hover::before {
+  animation: borderAnimation .7s forwards;
+  cursor: pointer;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-top-color: #d14035;
+  }
+  25% {
+    border-right-color: #d14035;
+  }
+  50% {
+    border-bottom-color: #d14035;
+  }
+  75% {
+    border-left-color: #d14035;
+  }
+  100% {
+    border-color: #d14035;
+  }
+}
+
+.icon-container:hover::before {
+  animation: borderAnimation .7s linear forwards;
+}
+
+.icon-container:not(:hover)::before {
+  animation: reverseBorderAnimation .7s linear forwards;
+}
+
+@keyframes reverseBorderAnimation {
+  0% {
+    border-color: #d14035;
+  }
+  25% {
+    border-left-color: transparent;
+  }
+  50% {
+    border-bottom-color: transparent;
+  }
+  75% {
+    border-right-color: transparent;
+  }
+  100% {
+    border-top-color: transparent;
+  }
+}
